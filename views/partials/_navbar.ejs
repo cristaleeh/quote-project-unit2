@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/stylesheets/partials.css" />
+
+<nav>
+  <% if(user) { %>
+  <div class="navbar">
+    <h1 id="nav-header">QuoteHub</h1>
+    <div class="nav-links">
+      <a href="/users/<%= user._id %>/quotes">Your Quotes</a>
+      <a href="/auth/sign-out">Sign Out</a>
+    </div>
+  </div>
+  <% } else { %>
+  <div class="navbar">
+    <h1 id="nav-header">QuoteHub</h1>
+    <div class="nav-links">
+      <a href="/auth/sign-in">Sign In</a>
+      <a href="/auth/sign-up">Sign Up</a>
+    </div>
+  </div>
+  <% } %>
+</nav>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Quote</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <div class="edit-body">
+      <h1><%= quote.quote %> - <%= quote.author %></h1>
+        <form action="/users/<%= user._id %>/quotes/<%= quote._id %>?_method=PUT" method="POST">
+          <label for="quote">Quote:</label>
+          <textarea name="quote" id="quote"><%= quote.quote %></textarea>
+
+          <label for="author">Author:</label>
+          <input type="text" name="author" id="author" value="<%= quote.author %>" />
+
+          <button type="submit">Update Quote</button>
+            <button type="button" onclick="window.location.href='/users/<%= user._id %>/quotes/<%= quote._id %>'"> Cancel </button>
+        </form>
+    </div>
+  </body>
+</html>

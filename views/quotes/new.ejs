@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a New Quote</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+ 
+    <div class="new-body">
+      <h1>Add a New Quote</h1>
+      <form action="/users/<%= user._id %>/quotes" method="POST">
+        <label for="quote">Quote:</label>
+        <textarea name="quote" id="quote"></textarea>
+
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author"/>
+
+        <button type="submit">Add Quote</button>
+      </form>
+    </div>
+  </body>
+</html>

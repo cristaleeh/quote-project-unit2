@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Hub</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+  <div class="all-apps-body">
+    <div class="all-apps-header">
+      <h1>QuoteHub Home Page</h1>
+      <a href="/users/<%=user._id%>/quotes/new">Add a Quote</a>
+  </div>
+  <ul>
+    <% quotes.forEach((quote)=>{ %>
+      <a href="/users/<%= user._id %>/quotes/<%= quote._id %>">
+        <li><%= quote.quote %> - <%= quote.author %></li>
+      </a>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+</html>

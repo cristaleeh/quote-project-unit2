@@ -5,6 +5,7 @@ const app = express();
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const morgan = require('morgan');
+const path = require('path');
 const session = require('express-session');
 
 
@@ -13,7 +14,7 @@ const passUserToView = require('./middleware/pass-user-to-view.js');
 
 const authController = require('./controllers/auth.js');
 
-const applicationsController = require('./controllers/applications.js');
+const quotesController = require('./controllers/quotes.js');
 
 
 const port = process.env.PORT ? process.env.PORT : '3000';
@@ -30,6 +31,9 @@ mongoose.connection.on('connected', () => {
 app.use(express.urlencoded({ extended: false }))
 app.use(methodOverride("_method"));
 app.use(morgan('dev'));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -44,17 +48,20 @@ app.use(passUserToView);
 
 
 
-app.get('/', (req, res) => {
-  res.render('index.ejs', {
-    user: req.session.user,
-  });
-});
+// server.js
 
+app.get('/', (req, res) => {
+  if (req.session.user) {
+    res.redirect(`/users/${req.session.user._id}/quotes`);
+  } else {
+    res.render('index.ejs');
+  }
+});
 
 
 app.use('/auth', authController);
 app.use(isSignedIn);
-app.use('/users/:userId/applications', applicationsController);
+app.use('/users/:userId/quotes', quotesController);
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
