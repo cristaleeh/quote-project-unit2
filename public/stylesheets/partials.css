@@ -1,5 +1,5 @@
 .navbody {
-  background-image: url('./pictures/bg-tropical.jpg');
+  background-image: url('./pictures/bg-redfl.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -12,21 +12,23 @@
   padding: 5px 20px;
   justify-content: space-between;
   align-items: center;
- 
+  background-color: rgba(0, 0, 0, 0.301);
   border-radius: 10px;
   margin: 0 20px;
 }
 
 #nav-header {
-  color: #7c2117c6;
+  color: #a02315dd;
   size: 1em !important;
+}
+.nav-links a {
+  color: #a88b09;
 
 }
-
 .authlink {
   text-decoration: none;
   margin: 0 15px;
-  color: #4b598e;
+  color: #f3e8e7;
   font-weight: bold;
 }
 
@@ -34,3 +36,6 @@
   color: white;
 }
 
+.auth-links a {
+  color: rgb(186, 134, 29);
+}

@@ -155,7 +155,9 @@ button {
   align-items: center;
   justify-content: center;
 }
-
+.all-apps-header a {
+  color: rgb(206, 160, 44)
+}
 .all-apps-header {
   display: flex;
   flex-direction: row;
@@ -163,12 +165,13 @@ button {
   align-items: center;
   padding: 10px 20px;
   width: 90%;
+  color: #c8a451;
 }
 
 .add-app-link {
   padding: 10px;
   background-color: #ce4866;
-  color: white;
+  color: rgb(201, 100, 100);
   border-radius: 30px;
   border: none;
   font-size: 1.1em;
@@ -194,18 +197,21 @@ ul {
 
 ul > a {
   text-decoration: none;
-  color: #7c2a15;
+  color: #ffffff;
   width: 50%;
-  background-color: #f6e7e7d5;
+  background-color: #e78383d5;
   border-radius: 30px;
   padding: 10px 20px;
   margin: 15px 0;
-  font-weight: bold;
+  font-weight: normal;
   text-align: center;
+  font-weight: 600px;
+  font-size: 20px;
+  letter-spacing: 1.5px;
 }
 
 ul > a:hover {
-  background-color: #8c3535;
+  background-color: #d39797;
   color: white;
 }
 
