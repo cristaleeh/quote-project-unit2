@@ -7,15 +7,15 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: #a47b50;
 
 }
 
 
 .index-body {
-  background-image: url('./pictures/bg-heart.jpg');
+  background-image: url('./pictures/bg-redfl.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   min-height: 100vh;
   width: 100vw;
   color: white;
@@ -36,15 +36,20 @@ body {
 .index-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 100%;
-  border: 10px solid rgba(124, 75, 6, 0.857);
+  height: 100vh;
+  width: 100vh;
+  border: 10px solid rgba(5, 3, 0, 0.857);
   border-radius: 12px;
-  background-color: rgba(218, 162, 219, 0.941);
+  background-color: rgba(11, 4, 3, 0.573);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   font-size: 30px;
-  margin: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
 }
 
 
@@ -69,18 +74,18 @@ body {
 }
 
 .signup-link {
-  background-color: #ce4866;
+  background-color: #7c2117c6;
   color: white;
   margin: 0 0 20px 0;
 }
 
 .signup-link:hover {
-  background-color: #ff5378;
+  background-color: #7c2117c6;
 }
 
 .signin-link {
   background-color: #f6e7e7;
-  color: #1c2e5b;
+  color: #7c2117c6;
   margin: 20px 0 0 0;
 }
 
@@ -107,7 +112,7 @@ body {
 }
 
 h1 {
-  color: #1c2e5b;
+  color: #c8a451;
 
 }
 
@@ -122,6 +127,7 @@ form {
   border-radius: 20px;
   color: #4b598e;
   font-weight: bold;
+  font-size: 1.2em;
 }
 
 input {
@@ -138,6 +144,7 @@ button {
   border: none;
   margin: 15px 0;
   font-size: 1.1em;
+  font-family: "Tagesschrift", system-ui;
 }
 
 
@@ -181,15 +188,15 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(218, 162, 219, 0.941);
+  background-color: #7c2117c6;
   border-radius: 12px;
 }
 
 ul > a {
   text-decoration: none;
-  color: #1c2e5b;
+  color: #7c2a15;
   width: 50%;
-  background-color: #f6e7e7;
+  background-color: #f6e7e7d5;
   border-radius: 30px;
   padding: 10px 20px;
   margin: 15px 0;
@@ -198,23 +205,28 @@ ul > a {
 }
 
 ul > a:hover {
-  background-color: #4b598e;
+  background-color: #8c3535;
   color: white;
 }
-/* public/stylesheets/style.css */
 
 .new-body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
+.new-header {
+  width: 300px;
 
+}
 .new-body > form,
 .edit-body > form {
   height: 70%;
 }
-
+.new-body h1 {
+  position: relative;
+}
 textarea,
 select {
   border: 1px solid rgb(182, 182, 182);
@@ -232,4 +244,13 @@ select {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+.secondpage {
+  background-image: url('./pictures/bg-redfl.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100vw;
+  color: white;
 }

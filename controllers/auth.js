@@ -26,7 +26,7 @@ router.post('/sign-up', async (req,res) => {
   req.body.password = hashedPassword;
   delete req.body.confirmPassword;
   const user = await User.create(req.body);
-  res.send(`Welcome ${user.username}!`);
+  res.render("auth/sign-in.ejs");
 });
 
 

@@ -5,7 +5,11 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: #9ac2ef;
+  background-image: url('./pictures/bvg-flb.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 
 .show-body {
@@ -14,6 +18,10 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
+
+  background-color: #2b3a4788;
+  border-radius: 10px;
+
 }
 
 .show-header {
@@ -22,12 +30,15 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  font-family: "Tagesschrift", system-ui;
 }
 
 .show-header > h1 {
-  color: #1c2e5b;
+  color: #f0c710dd;
   font-size: 3.4em;
   margin-left: 10px;
+  margin-right: 10px;
+ 
 }
 
 .show-actions {
@@ -41,17 +52,18 @@ body {
 
 button {
   padding: 8px 10px;
-  background-color: #ce4866;
-  color: white;
-  border-radius: 30px;
+  background-color: #4b598e;
+  color: rgb(255, 255, 253);
+  border-radius: 50px;
   border: none;
   font-size: 1.1em;
   width: 10em;
   margin: 5px;
+  font-family: "Tagesschrift", system-ui;
 }
 
 button:hover {
-  background-color: #e84a6c;
+  background-color: #000000;
 }
 
 .show-actions > a {
@@ -64,7 +76,7 @@ button:hover {
   width: 10em;
   text-align: center;
   margin: 5px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Tagesschrift", system-ui;
 }
 
 .show-actions > a:hover {
@@ -72,7 +84,7 @@ button:hover {
 }
 
 p {
-  color: #ce4866;
+  color: #f0c710dd;
   font-weight: bold;
   font-size: 1.4em;
   margin: 10px 30px;

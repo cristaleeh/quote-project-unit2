@@ -10,7 +10,9 @@
     <%- include('../partials/_navbar.ejs') %>
  
     <div class="new-body">
-      <h1>Add a New Quote</h1>
+      <div class="new-header">
+        <h1>Add a New Quote</h1>
+      </div>
       <form action="/users/<%= user._id %>/quotes" method="POST">
         <label for="quote">Quote:</label>
         <textarea name="quote" id="quote"></textarea>

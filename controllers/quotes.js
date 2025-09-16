@@ -45,10 +45,6 @@ router.get('/', async (req, res) => {
 
 
 
-
-
-
-
 router.get('/:quoteId', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
