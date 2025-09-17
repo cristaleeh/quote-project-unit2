@@ -1,4 +1,12 @@
 # quote-project-unit2# 📖 Quote Hub  
+![Home Page](./public/stylesheets/pictures/1.png)
+![Sign Up](./public/stylesheets/pictures/2.png)
+![Quote Page](./public/stylesheets/pictures/3.png)
+![View Quote](./public/stylesheets/pictures/4.png)
+![Edit Quote](./public/stylesheets/pictures/5.png)
+
+---
+
 
 A web app for sharing, saving, and exploring quotes. Users can create their own quotes, view their quotes, and manage their personal collection. Built with **Node.js, Express, MongoDB, and EJS**.  
 
@@ -19,23 +27,82 @@ A web app for sharing, saving, and exploring quotes. Users can create their own 
 
 ---
 
-## 📂 Project Structure  
-project/
-│── controllers/ # Route controllers
-│── models/ # Mongoose models
-│── routes/ # Express routes
-│── views/ # EJS templates
-│── public/ # Static assets (CSS, images)
-│── .env # Environment variables
-│── server.js # App entry point
+## 🎯 Future Goals
+
+- Add user profile pages
+- Create a home page to see other viewers created quotes
+- Implement search functionality for quotes
+- Allow users to like or favorite quotes
+- Add a category or tag system for quotes
+- Improve UI/UX design with better styling and animations
+
 
 ---
-## ⚙️ Installation & Setup  
 
-Follow these steps to run the project locally:  
+## 📂 Project Structure  
 
-1. **Clone the repository**  
+```
+quote-project-unit2
+├─ README.md
+├─ controllers
+│  ├─ auth.js
+│  └─ quotes.js
+├─ middleware
+│  ├─ is-signed-in.js
+│  └─ pass-user-to-view.js
+├─ models
+│  └─ user.js
+├─ package-lock.json
+├─ package.json
+├─ public
+│  └─ stylesheets
+│     ├─ partials.css
+│     ├─ pictures
+│     │  ├─ 1.png
+│     │  ├─ 2.png
+│     │  ├─ 3.png
+│     │  ├─ 4.png
+│     │  ├─ 5.png
+│     │  ├─ bb.jpg
+│     │  ├─ bg-redfl.jpg
+│     │  └─ bvg-flb.jpg
+│     ├─ show.css
+│     └─ style.css
+├─ server.js
+└─ views
+   ├─ auth
+   │  ├─ sign-in.ejs
+   │  └─ sign-up.ejs
+   ├─ index.ejs
+   ├─ partials
+   │  └─ _navbar.ejs
+   └─ quotes
+      ├─ edit.ejs
+      ├─ index.ejs
+      ├─ new.ejs
+      └─ show.ejs
+
+```
+---
+
+
+## Installation 
+ 1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/quote-project-unit2.git
+    cd quote-project-unit2
+    ```
+2. **Install dependencies:**
    ```bash
-   git clone https://github.com/your-username/quote-hub.git
-   cd quote-hub
-
+   npm install
+    ```
+ 3. **Set up environment variables:**
+    - Copy `.env.example` to `.env` and fill in the required values.
+4. **Start the development server:**
+    ```bash
+    npm start    
+    ```
+5. **Open your browser and visit:**
+   ```
+    http://localhost:3000 
+   ```
